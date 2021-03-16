@@ -13,11 +13,13 @@ let getTime = function() {
 		},
 	
 		correctMonth = function(month){
+			
 			monthNames = ['января', 'февраля','марта', 'апреля','мая', 'июня','июля', 'августа',
 						'сентября', 'октября','ноября', 'декабря']
 			for (let i = 0; i < monthNames.length;  i++) {
+				// console.log(i);
 				if (month = i){
-					return monthNames[i];
+					return monthNames[i+1];
 				} 
 			}
 		},
@@ -62,7 +64,7 @@ let getTime = function() {
 		}
 		
 	return timeOptions = [`'Сегодня ${correctWeekDay(arrTime[0])}, ${arrTime[1]} ${correctMonth(arrTime[2])} ${arrTime[3]} года, ${arrTime[4]} ${correctHours(arrTime[4])} ${arrTime[5]} ${correctMinutes(arrTime[5])} ${arrTime[6]} ${correctSeconds(arrTime[6])}'`,
-				`'${editValue(arrTime[1])}.${editValue(arrTime[2])}.${editValue(arrTime[3])} - ${editValue(arrTime[4])}:${editValue(arrTime[5])}:${editValue(arrTime[6])}'`];
+				`'${editValue(arrTime[1])}.${editValue(arrTime[2] + 1)}.${editValue(arrTime[3])} - ${editValue(arrTime[4])}:${editValue(arrTime[5])}:${editValue(arrTime[6])}'`];
 		
 };
 
