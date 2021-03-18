@@ -8,6 +8,7 @@ let num16 = localStorage.getItem('color');
 const render = () => {
     color.textContent = num16;
     body.style.backgroundColor = num16;
+    btnChange.style.color = num16;
 } 
 render();
 
